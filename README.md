@@ -1,116 +1,122 @@
-# UrbanRetail-Inventory-Intelligence-System
-📌 Project Overview
+# 📦 Solving Inventory Inefficiencies Using SQL & Power BI
 
-The UrbanRetail Inventory Intelligence System is an end-to-end inventory analytics project designed to improve supply chain efficiency for a multi-store retail chain.
-Using SQL for data modeling and analysis and Power BI for visualization, the project identifies stock imbalances, evaluates forecast accuracy, optimizes reorder decisions, and recommends inter-store stock transfers.
-The system highlights how regional-level aggregation can mask critical store-level risks and demonstrates data-driven decision-making for inventory optimization.
+## 📝 Overview
+Urban Retail Co. is a fast-growing mid-sized retail chain operating across multiple regions with a diverse product portfolio. Despite strong sales, the company faced persistent inventory inefficiencies that impacted profitability and operational decision-making.
 
-🎯 Business Objectives
-Detect overstock and understock risks at store and product levels
-Identify inventory aging and obsolete stock
-Evaluate demand forecast accuracy
-Recommend dynamic reorder points
-Enable inter-store transfer decisions to reduce holding costs
+Key challenges included:
 
-🗂 Dataset Description
-The dataset represents transactional inventory data for a multi-region retail business and includes:
-Inventory levels and units sold
-Demand forecasts and reorder quantities
-Pricing, discounts, promotions, and competitor pricing
-Weather and seasonality indicators
-Source data was normalized into relational tables to maintain data integrity and scalability.
+- Frequent **stockouts at store level** despite healthy regional inventory
+- **Overstocking of slow-moving and obsolete SKUs**, increasing holding costs
+- **Forecast inaccuracies** leading to excess safety stock
+- Limited visibility into **store-wise inventory risk**
+- Reactive decision-making due to lack of actionable insights
 
-🧱 Data Model (ERD)
-The project follows a normalized relational schema:
+👉 **Goal:** Design and implement an end-to-end, SQL-driven inventory intelligence system that transforms raw transactional data into **clear operational insights and actionable recommendations**, supported by an interactive Power BI dashboard.
 
-Tables
-products — Product master data
-stores — Store reference table
-inventory — Core transactional inventory data
-pricing_conditions — External factors affecting demand and pricing
-Entity Relationship Diagram
+---
 
-🛠️ Technology Stack
-SQL Server — Data modeling, transformations, and analytics
-Power BI — Dashboarding and business intelligence
-Excel / CSV — Intermediate analytical outputs
-GitHub — Version control and project documentation
+## 🎯 Objectives
+- Normalize raw inventory data into a **clean relational database schema**
+- Build analytical SQL queries to:
+  - Monitor stock levels, surplus/deficit, and stock risks
+  - Identify fast-moving vs slow-moving products
+  - Calculate dynamic reorder points using sales velocity
+  - Analyze inventory aging and turnover ratios
+  - Measure forecast accuracy and bias
+  - Recommend inter-store stock transfers
+- Create a **Power BI dashboard** for business stakeholders to track KPIs and take informed actions
 
-📊 Key Analyses Performed
-1️⃣ Stock Visibility & Risk Detection
-Region and product-level stock visibility
-Identification of hidden store-level stockouts
-Stock-to-demand coverage ratio alerts
+---
 
-2️⃣ Inventory Aging Analysis
-Estimated days to inventory depletion
-Classification into:
-Healthy (0–3 months)
-Slow-moving (3–6 months)
-Obsolete (6+ months)
+## 🛠 Tech Stack
 
-3️⃣ Forecast Accuracy Evaluation
-Comparison of actual sales vs demand forecasts
-Identification of systematic over-forecasting
-Average forecast error analysis
+| Tool      | Purpose |
+|----------|--------|
+| SQL Server / MySQL | Data modeling, cleaning, and analytics |
+| Excel / CSV | Query exports and Power BI data source |
+| Power BI | Interactive dashboards and business insights |
 
-4️⃣ Reorder Point Optimization
-Burn-rate-based reorder point calculation
-Lead time and safety stock considerations
-Dynamic reorder recommendations
+---
 
-5️⃣ Inter-Store Transfer Recommendation
-Detection of surplus and deficit stores
-Transfer logic refined using:
-Promotions
-Pricing advantage
-Competitor pricing
-Final action classification:
-TRANSFER
-HOLD
-MONITOR
+## 📌 Key Features
 
-📈 Power BI Dashboard Features
-Interactive slicers for product, store, region, and promotions
-Conditional formatting for stock gaps
-Action-oriented indicators (Transfer / Hold / Monitor)
-Custom tooltip legends for inventory interpretation
+### ✅ Data Modeling
+- Fully **normalized relational schema**
+- Clear entity separation for products, stores, inventory, and pricing
+- ERD created to represent relationships and data flow
 
-📁 Repository Structure
-UrbanRetail-Inventory-Intelligence-System/
-│
-├── README.md
-├── UrbanRetail_Inventory_Analysis.sql
-├── UrbanRetail_Inventory_Dashboard.pbix
-├── data/
-│   ├── inventory_forecasting.csv
-│   ├── forecast_accuracy_analysis.csv
-│   ├── inventory_aging_analysis.csv
-│   ├── reorder_point_analysis.csv
-│   ├── stock_adjustment_recommendation.csv
-│
-├── images/
-│   ├── dashboard_overview.png
-│   ├── stock_adjustment_table.png
-│   ├── tooltip_inventory_legend.png
-│   ├── erd.png
-│
-└── UrbanRetail_Problem_Statement.pdf
+![ERD](docs/ERD_UrbanRetail_Inventory.png)
 
-📌 Key Insights & Findings
-Regional aggregation masked store-level understock risks
-Demand forecasts consistently overestimated demand by 11–13 units
-Several SKUs showed high inventory aging, indicating excess holding cost
-Inter-store transfers provided a cost-effective alternative to reordering
+---
 
-🚀 Business Impact
-Reduced capital lock-in due to overstock
-Improved inventory turnover
-Smarter, context-aware transfer decisions
-Enhanced operational visibility for decision-makers
+### ✅ Advanced SQL Analytics
+- Stock surplus/deficit and coverage ratio analysis
+- Store-level stock risk detection (masked by regional aggregation)
+- Dynamic reorder point calculation using burn rate
+- Inventory aging and obsolete stock identification
+- Forecast accuracy analysis highlighting systematic over-forecasting
+- Inter-store transfer recommendation logic with pricing and promotion constraints
 
-📄 How to Use
-Run UrbanRetail_Inventory_Analysis.sql in SQL Server
-Load generated CSVs into Power BI
-Open UrbanRetail_Inventory_Dashboard.pbix
-Explore insights using slicers and tooltips
+---
+
+### ✅ Power BI Dashboard
+- Inventory health KPIs (Total Inventory, Demand, Net Stock Position)
+- Seasonal demand trends and inventory velocity
+- Fast-selling vs slow-moving product segmentation
+- Store efficiency: Sales vs Supply
+- Action-oriented **Final Action Plan** (HOLD / MONITOR / TRANSFER)
+- Custom tooltip legend for intuitive decision-making
+
+![Dashboard](screenshots/dashboard_overview.png)
+
+---
+
+## 📈 Business Impact
+- Identified **hidden store-level stock risks** despite regional surplus
+- Highlighted **systematic over-forecasting (11–13 units on average)**
+- Recommended inventory rebalancing to reduce holding costs
+- Improved decision-making through **actionable, visual insights**
+- Optimized working capital by reducing excess safety stock
+
+---
+
+## 🚀 How to Run
+
+1️⃣ Execute `UrbanRetail_Inventory_Analysis.sql` to create schema and populate tables  
+2️⃣ Run analytical SQL queries to generate insights  
+3️⃣ Export query outputs as CSV files  
+4️⃣ Load CSVs into Power BI using `UrbanRetail_Inventory_Dashboard.pbix`  
+5️⃣ Interact with filters, tooltips, and visuals for analysis  
+
+---
+
+## 📦 Deliverables
+- ✅ SQL scripts with business-focused logic
+- ✅ Normalized database schema & ERD
+- ✅ Power BI dashboard (`.pbix`)
+- ✅ Executive Summary (PDF)
+- ✅ Query outputs as CSV files
+
+---
+
+## 💡 Future Enhancements
+- Real-time ETL pipelines for automated data ingestion
+- Predictive demand forecasting using machine learning
+- ERP integration for automated reorder and transfer execution
+- Cost-based optimization models for inventory decisions
+
+---
+
+## 📂 Resources
+- Dataset: `inventory_forecasting.csv`
+- SQL Script: `UrbanRetail_Inventory_Analysis.sql`
+- Dashboard: `UrbanRetail_Inventory_Dashboard.pbix`
+
+---
+
+## 👤 Author
+**Sunny Kumar**  
+Data Analytics & Business Intelligence Enthusiast  
+
+🔗 GitHub: https://github.com/Jakhar05
+
