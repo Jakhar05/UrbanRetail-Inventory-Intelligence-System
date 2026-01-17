@@ -45,7 +45,7 @@ Key challenges included:
 - Clear entity separation for products, stores, inventory, and pricing
 - ERD created to represent relationships and data flow
 
-![ERD](ERD_UrbanRetail_Inventory.png)
+![ERD](erd/ERD_UrbanRetail_Inventory.png)
 
 ---
 
@@ -67,7 +67,7 @@ Key challenges included:
 - Action-oriented **Final Action Plan** (HOLD / MONITOR / TRANSFER)
 - Custom tooltip legend for intuitive decision-making
 
-![Dashboard](dashboard_overview.png)
+![Dashboard](screenshots/dashboard_overview.png)
 
 ---
 
