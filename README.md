@@ -1,7 +1,7 @@
 # 📦 Solving Inventory Inefficiencies Using SQL & Power BI
 
 ## 📝 Overview
-Urban Retail Co. is a fast-growing mid-sized retail chain operating across multiple regions with a diverse product portfolio. Despite strong sales, the company faced persistent inventory inefficiencies that impacted profitability and operational decision-making.
+Urban Retail Co. is a fast-growing mid-sized retail chain operating across multiple regions with a diverse product portfolio. Despite strong sales, the company faced persistent inventory inefficiencies that impacted profitability and operational decision-making. 
 
 Key challenges included:
 
