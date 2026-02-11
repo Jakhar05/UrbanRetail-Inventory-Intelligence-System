@@ -67,7 +67,7 @@ Key challenges included:
 
 ## Dashboard Preview
 
-![Inventory Dashboard](screenshots/dashboard_overview.png)
+[View Dashboard Screenshot](screenshots/dashboard_overview.png)
   
 ---
 
@@ -81,19 +81,8 @@ Key challenges included:
 ---
 ## 🎯 Inventory Recommendation Output
 
-The system generates actionable recommendations based on stock levels, demand trends, and reorder thresholds.
+[View Recommendation Table](screenshots/stock_adjustment_table.png)
 
-<p align="center">
-  <img src="screenshots/recommendation_table.png" width="800">
-</p>
-
-### What This Shows:
-- Products at risk of stock-out
-- Overstocked items
-- Suggested reorder quantities
-- Priority levels for action
-  
----
 
 ## 🚀 How to Run
 
