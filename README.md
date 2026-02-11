@@ -65,6 +65,10 @@ Key challenges included:
 - Action-oriented **Final Action Plan** (HOLD / MONITOR / TRANSFER)
 - Custom tooltip legend for intuitive decision-making
 
+## Dashboard Preview
+
+![Inventory Dashboard](screenshots/dashboard_overview.png)
+  
 ---
 
 ## 📈 Business Impact
@@ -74,6 +78,21 @@ Key challenges included:
 - Improved decision-making through **actionable, visual insights**
 - Optimized working capital by reducing excess safety stock
 
+---
+## 🎯 Inventory Recommendation Output
+
+The system generates actionable recommendations based on stock levels, demand trends, and reorder thresholds.
+
+<p align="center">
+  <img src="screenshots/recommendation_table.png" width="800">
+</p>
+
+### What This Shows:
+- Products at risk of stock-out
+- Overstocked items
+- Suggested reorder quantities
+- Priority levels for action
+  
 ---
 
 ## 🚀 How to Run
